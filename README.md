@@ -2,10 +2,13 @@
 
 Installation / upgrade
 
-We had to do a little custimization of the sentry onpremise installation, so we forked their project.
-
+We had to do a little custimization of the sentry onpremise installation (added custom plugin), so we forked their project.
+If you want to change something or upgrade the Sentry version, do this:
+```
 make build
-tag [image] 169325977222.dkr.ecr.us-east-1.amazonaws.com/sentry-onpremise:[bump tag] docker push 169325977222.dkr.ecr.us-east-1.amazonaws.com/sentry-onpremise:[tag]
+tag [image] 169325977222.dkr.ecr.us-east-1.amazonaws.com/sentry-onpremise:[bump tag]
+docker push 169325977222.dkr.ecr.us-east-1.amazonaws.com/sentry-onpremise:[tag]
+```
 
 I installed the chart like this (it takes a surprisingly long time)
 helm upgrade --install —-wait -f sentry.yml --namespace tools sentry stable/sentry
