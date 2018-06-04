@@ -11,7 +11,9 @@ docker push 169325977222.dkr.ecr.us-east-1.amazonaws.com/sentry-onpremise:[tag]
 ```
 
 I installed the chart like this (it takes a surprisingly long time)
+```
 helm upgrade --install —-wait -f sentry.yml --namespace tools sentry stable/sentry
+```
 
 ```
 sentry.yml:
